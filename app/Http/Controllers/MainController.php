@@ -27,7 +27,7 @@ public function index()
 
 public function addUser(Request $request ){
     $rules = [
-        'username' => 'required|max:20',
+        'username' => 'required|max:50',
         'password' => 'required|max:20',
     
     ];
@@ -51,7 +51,7 @@ public function update(Request $request,$id){
     {
     case 'PUT':
     $rules = [
-    'username' => 'required|max:20',
+    'username' => 'required|max:50',
     'password' => 'required|max:20',
   
     ];
@@ -60,7 +60,7 @@ break;
 
 case 'PATCH':
     $rules = [
-        'username' => 'required_without:password|max:20',
+        'username' => 'required_without:password|max:50',
         'password' => 'required_without:username|max:20',
 
     ];
